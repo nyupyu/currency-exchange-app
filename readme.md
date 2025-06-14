@@ -58,4 +58,4 @@ Full-stack currency exchange application with real-time Polish National Bank (NB
 
 ### Deployment
 
-[https:](https://app.oki.dev/currency-exchange-app)
+[currency-exchange-app](https://app.oki.dev/currency-exchange-app)
