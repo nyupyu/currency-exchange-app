@@ -1,0 +1,31 @@
+### Health Check
+GET http://localhost:5000/api/health
+
+### Get current rates
+GET http://localhost:5000/api/currency/current
+
+### Get available currencies  
+GET http://localhost:5000/api/currency/currencies
+
+### Get historical rate for USD on specific date
+GET http://localhost:5000/api/currency/historical/USD/2024-01-15
+
+### Get historical rates for EUR in date range
+GET http://localhost:5000/api/currency/range/EUR/2024-01-01/2024-01-31
+
+GET http://localhost:5000/api/currency/range/USD/2025-05-14/2025-06-14
+
+### Export to CSV
+POST http://localhost:5000/api/currency/export-csv
+Content-Type: application/json
+
+{
+  "currencyCode": "USD",
+  "startDate": "2024-01-01",
+  "endDate": "2024-01-31"
+}
+
+
+### Download CSV file
+GET http://localhost:5000/api/currency/download/USD_2024-01-01_2024-01-31_2025-06-14T19-45-58.csv
+
