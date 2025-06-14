@@ -1,0 +1,43 @@
+{
+	"name": "currency-exchange-backend",
+	"version": "1.0.0",
+	"description": "Backend for currency exchange app",
+	"main": "dist/server.js",
+	"scripts": {
+		"dev": "nodemon --exec ts-node src/server.ts",
+		"build": "tsc",
+		"start": "node dist/server.js",
+		"lint": "eslint src/**/*.ts --fix",
+		"test": "jest",
+		"clean": "rm -rf dist",
+		"cleanup-csv": "node -e \"require('./dist/services/csvService').default.cleanupOldFiles()\""
+	},
+	"dependencies": {
+		"axios": "^1.10.0",
+		"compression": "^1.8.0",
+		"cors": "^2.8.5",
+		"csv-writer": "^1.6.0",
+		"date-fns": "^3.6.0",
+		"dotenv": "^16.5.0",
+		"express": "^4.21.2",
+		"express-rate-limit": "^7.5.0",
+		"helmet": "^7.2.0",
+		"joi": "^17.13.3",
+		"morgan": "^1.10.0"
+	},
+	"devDependencies": {
+		"@types/compression": "^1.8.1",
+		"@types/cors": "^2.8.19",
+		"@types/express": "^4.17.23",
+		"@types/jest": "^29.5.11",
+		"@types/morgan": "^1.9.10",
+		"@types/node": "^20.19.0",
+		"@typescript-eslint/eslint-plugin": "^6.21.0",
+		"@typescript-eslint/parser": "^6.21.0",
+		"eslint": "^8.57.1",
+		"jest": "^29.7.0",
+		"nodemon": "^3.1.10",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.8.3"
+	}
+}
