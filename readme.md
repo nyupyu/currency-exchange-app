@@ -2,6 +2,10 @@
 
 Full-stack currency exchange application with real-time Polish National Bank (NBP) API integration, featuring interactive charts and historical data analysis.
 
+## 🌐 Live Demo
+
+**🚀 [Try the application here](https://app.oki.dev/currency-exchange-app)**
+
 ## 🚀 Features
 
 - 📈 **Real-time Exchange Rates** - Live currency data from NBP API
@@ -11,6 +15,10 @@ Full-stack currency exchange application with real-time Polish National Bank (NB
 - 📱 **Responsive Design** - Mobile-first approach with TailwindCSS
 - ⚡ **Fast Performance** - Vite bundler with React Query caching
 - 🛡️ **Production Ready** - Rate limiting, CORS, compression, security headers
+
+## 🔮 Planned Features
+
+- 📤 **CSV Export** - Export historical data for custom date ranges to CSV format
 
 ## 🛠️ Tech Stack
 
@@ -47,3 +55,7 @@ Full-stack currency exchange application with real-time Polish National Bank (NB
 - **Nodemon** - Development server auto-restart
 - **Jest** - Testing framework
 - **Workspaces** - Monorepo management
+
+### Deployment
+
+[https:](https://app.oki.dev/currency-exchange-app)
