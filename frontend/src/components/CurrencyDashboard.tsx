@@ -5,7 +5,7 @@ import CurrencyChart from './CurrencyChart';
 import CurrencySelector from './CurrencySelector';
 import TimePeriodSelector from './TimePeriodSelector';
 import DateRangeSelector from './DateRangeSelector';
-import { format, subDays, subMonths, subYears, isWeekend } from 'date-fns';
+import { isWeekend } from 'date-fns';
 
 export type TimePeriod = '1D' | '1W' | '1M' | '1Y' | 'Custom';
 

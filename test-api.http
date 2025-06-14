@@ -1,5 +1,5 @@
 ### Health Check
-GET http://localhost:5000/api/health
+GET http://localhost:5000/api/currency/health
 
 ### Get current rates
 GET http://localhost:5000/api/currency/current
@@ -29,3 +29,19 @@ Content-Type: application/json
 ### Download CSV file
 GET http://localhost:5000/api/currency/download/USD_2024-01-01_2024-01-31_2025-06-14T19-45-58.csv
 
+### PROD
+
+### Health Check
+GET https://oki.dev/api/currency/health
+
+### Get current rates
+GET https://oki.dev/api/currency/current
+
+### Get available currencies  
+GET https://oki.dev/api/currency/currencies
+
+### Get historical rate for USD on specific date
+GET https://oki.dev/api/currency/historical/USD/2024-01-15
+
+### Get historical rates for EUR in date range
+GET https://oki.dev/api/currency/range/EUR/2024-01-01/2024-01-31

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { currencyApi } from '../services/api';
 import { CurrencyRate } from '../types';
-import { RefreshCw, TrendingUp, TrendingDown } from 'lucide-react';
+import { RefreshCw } from 'lucide-react';
 
 const CurrentRates: React.FC = () => {
 	const [rates, setRates] = useState<CurrencyRate[]>([]);

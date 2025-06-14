@@ -4,11 +4,9 @@ import helmet from 'helmet';
 import compression from 'compression';
 import morgan from 'morgan';
 import rateLimit from 'express-rate-limit';
-import dotenv from 'dotenv';
-
+// import dotenv from 'dotenv';
 import currencyRoutes from './routes/currency';
-
-dotenv.config();
+// dotenv.config();
 
 const app = express();
 
@@ -56,7 +54,7 @@ app.use((req, res, next) => {
 });
 
 // Health check endpoint
-app.get('/api/health', (req, res) => {
+app.get('/api/currency/health', (req, res) => {
 	res.json({
 		success: true,
 		message: 'Currency Exchange API is running',

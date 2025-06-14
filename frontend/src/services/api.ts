@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { ApiResponse, CurrencyRate, HistoricalRate, Currency, CsvExportRequest, CsvExportResponse } from '../types';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || '/api/currency';
 
 const api = axios.create({
 	baseURL: API_BASE_URL,
@@ -18,7 +18,7 @@ api.interceptors.request.use(config => {
 api.interceptors.response.use(
 	response => response,
 	error => {
-		console.error('🚨 API Error:', error);
+		console.error('API Error:', error);
 		return Promise.reject(error);
 	},
 );
@@ -26,19 +26,19 @@ api.interceptors.response.use(
 export const currencyApi = {
 	// Get current exchange rates
 	getCurrentRates: async (): Promise<CurrencyRate[]> => {
-		const response = await api.get<ApiResponse<CurrencyRate[]>>('/currency/current');
+		const response = await api.get<ApiResponse<CurrencyRate[]>>('/current');
 		return response.data.data || [];
 	},
 
 	// Get available currencies
 	getCurrencies: async (): Promise<Currency[]> => {
-		const response = await api.get<ApiResponse<Currency[]>>('/currency/currencies');
+		const response = await api.get<ApiResponse<Currency[]>>('/currencies');
 		return response.data.data || [];
 	},
 
 	// Get historical rate for specific date
 	getHistoricalRate: async (code: string, date: string): Promise<HistoricalRate> => {
-		const response = await api.get<ApiResponse<HistoricalRate>>(`/currency/historical/${code}/${date}`);
+		const response = await api.get<ApiResponse<HistoricalRate>>(`/historical/${code}/${date}`);
 		if (!response.data.data) {
 			throw new Error(response.data.message || 'No data found');
 		}
@@ -47,13 +47,13 @@ export const currencyApi = {
 
 	// Get historical rates for date range
 	getHistoricalRates: async (code: string, startDate: string, endDate: string): Promise<HistoricalRate[]> => {
-		const response = await api.get<ApiResponse<HistoricalRate[]>>(`/currency/range/${code}/${startDate}/${endDate}`);
+		const response = await api.get<ApiResponse<HistoricalRate[]>>(`/range/${code}/${startDate}/${endDate}`);
 		return response.data.data || [];
 	},
 
 	// Export to CSV
 	exportCsv: async (request: CsvExportRequest): Promise<CsvExportResponse> => {
-		const response = await api.post<ApiResponse<CsvExportResponse>>('/currency/export-csv', request);
+		const response = await api.post<ApiResponse<CsvExportResponse>>('/export-csv', request);
 		if (!response.data.data) {
 			throw new Error(response.data.message || 'Export failed');
 		}
@@ -62,7 +62,7 @@ export const currencyApi = {
 
 	// Download CSV file
 	downloadCsv: async (filename: string): Promise<void> => {
-		const response = await api.get(`/currency/download/${filename}`, {
+		const response = await api.get(`/download/${filename}`, {
 			responseType: 'blob',
 		});
 

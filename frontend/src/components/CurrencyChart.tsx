@@ -30,7 +30,7 @@ const CurrencyChart: React.FC<CurrencyChartProps> = ({ data, currency, loading, 
 	const minRate = Math.min(...data.map(d => d.mid));
 	const maxRate = Math.max(...data.map(d => d.mid));
 
-	const formatTooltip = (value: any, name: any, props: any) => {
+	const formatTooltip = (value: any, name: any) => {
 		if (name === 'rate') {
 			return [`${value.toFixed(4)} PLN`, `${currency} Rate`];
 		}
