@@ -4,7 +4,7 @@ Full-stack currency exchange application with real-time Polish National Bank (NB
 
 ## 🌐 Live Demo
 
-**🚀 [Try the application here](https://app.oki.dev/currency-exchange-app)**
+**🚀 [Try the application here](https://oki.dev/app/currency-exchange-app)**
 
 ## 🚀 Features
 
@@ -55,7 +55,3 @@ Full-stack currency exchange application with real-time Polish National Bank (NB
 - **Nodemon** - Development server auto-restart
 - **Jest** - Testing framework
 - **Workspaces** - Monorepo management
-
-### Deployment
-
-[currency-exchange-app](https://oki.dev/app/currency-exchange-app)
