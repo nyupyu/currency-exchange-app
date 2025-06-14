@@ -1,12 +1,4 @@
 import app from './app';
-import cors from 'cors';
-
-app.use(
-	cors({
-		origin: 'http://localhost:3000',
-		credentials: true,
-	}),
-);
 
 const PORT = process.env.PORT || 5000;
 
