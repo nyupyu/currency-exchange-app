@@ -56,64 +56,65 @@ Full-stack currency exchange application with real-time Polish National Bank (NB
 - **Jest** - Testing framework
 - **Workspaces** - Monorepo management
 
-
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js 18+ 
+
+- Node.js 18+
 - npm or yarn
 
 ### 1. Download & Install
 
 Download the project:
+
+```bash
 git clone https://github.com/nyupyu/currency-exchange-app.git
 cd currency-exchange-app
 npm install
+```
 
-### 2. Environment Setup
+### 2. Run Development Server
 
-Create environment files:
-
-Frontend (.env.local):
-VITE_API_URL=http://localhost:5000/api/currency
-VITE_BASE_PATH=/
-
-Backend (.env):
-PORT=5000
-NODE_ENV=development
-CORS_ORIGIN=http://localhost:5173
-
-### 3. Run Development Server
-
+```
 npm run dev
+```
 
 This will start:
+
 - Backend API server on http://localhost:5000
 - Frontend development server on http://localhost:5173
 
-### 4. Open Application
+### 3. Open Application
 
 Open your browser: http://localhost:5173
 
 ## 🔧 Available Scripts
 
 ### Root Level
-npm install          # Install all dependencies
-npm run dev          # Start development servers
-npm run build        # Build both frontend and backend
+
+```
+npm install # Install all dependencies
+npm run dev # Start development servers
+npm run build # Build both frontend and backend
+```
 
 ### Frontend
-npm run dev          # Start Vite dev server
-npm run build        # Build for production
-npm run preview      # Preview production build
 
-### Backend  
-npm run dev          # Start with nodemon
-npm run build        # Compile TypeScript
-npm start            # Start production server
+```
+npm run dev # Start Vite dev server
+npm run build # Build for production
+npm run preview # Preview production build
+```
 
-### Production  
+### Backend
+
+```
+npm run dev # Start with nodemon
+npm run build # Compile TypeScript
+npm start # Start production server
+```
+
+### Production
+
 - Frontend: Static files served by OpenLiteSpeed
 - Backend: Node.js process managed by PM2
-
-
