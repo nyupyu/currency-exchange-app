@@ -71,28 +71,15 @@ git clone https://github.com/nyupyu/currency-exchange-app.git
 cd currency-exchange-app
 npm install
 ```
-### 2. Environment Setup
-
-Create environment files:
-
-Frontend (.env.local):
-VITE_API_URL=http://localhost:5000/api/currency
-VITE_BASE_PATH=/
-
-Backend (.env):
-PORT=5000
-NODE_ENV=development
-CORS_ORIGIN=http://localhost:5173
-
-### 3. Run Development Server
-
+### 2. Run Development Server
+```
 npm run dev
-
+```
 This will start:
 - Backend API server on http://localhost:5000
 - Frontend development server on http://localhost:5173
 
-### 4. Open Application
+### 3. Open Application
 
 Open your browser: http://localhost:5173
 
