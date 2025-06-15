@@ -66,10 +66,11 @@ Full-stack currency exchange application with real-time Polish National Bank (NB
 ### 1. Download & Install
 
 Download the project:
+```bash
 git clone https://github.com/nyupyu/currency-exchange-app.git
 cd currency-exchange-app
 npm install
-
+```
 ### 2. Environment Setup
 
 Create environment files:
